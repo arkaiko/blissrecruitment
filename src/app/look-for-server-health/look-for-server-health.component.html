@@ -1,1 +1,4 @@
-<p>Checking for server health.</p>
+<div>
+  <p>{{loadingMessage}}</p>
+  <button [ngClass]="{dontDisplayThis: dontDisplayThis()}" (click)="checkForServer()">Try again!</button>
+</div>

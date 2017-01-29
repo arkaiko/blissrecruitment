@@ -1,0 +1,25 @@
+<div>
+  <input type="text" [(ngModel)]="searchTerms">
+  <button (click)="searchRecords()">Search</button>
+  <button (click)="dismissFilter()" [ngClass]="{dontDisplayThis: dontDisplayThis()}">Clear</button>
+</div>
+<div *ngFor="let question of questions">
+  <div style="border: 1px solid red; display: flex; min-width: 100%; margin: 20px 0">
+    <div >
+      <!-- <img src={{question.image_url}}> -->
+      <img style="height: 100%" src={{question.thumb_url}}>
+    </div>
+    <div style="padding-left: 40px">
+      <p>Question number: {{question.id}}</p>
+      <p>Published date: {{question.published_at | date:'fullDate'}}</p>
+      <p>Question: {{question.question}}</p>
+      <!-- <p>Choices: </p>
+      <div *ngFor="let choice of question.choices">
+        <p>
+          {{choice.choice}} | Votes: {{choice.votes}}
+        </p>
+      </div> -->
+      <p>+ details.</p>
+    </div>
+  </div>
+</div>
