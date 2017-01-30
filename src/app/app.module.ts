@@ -9,6 +9,7 @@ import { LookForServerHealthComponent } from './look-for-server-health/look-for-
 import { ListScreenComponent } from './list-screen/list-screen.component';
 import { DetailsScreenComponent } from './details-screen/details-screen.component';
 import { ShareScreenComponent } from './share-screen/share-screen.component';
+import { MonitorizeConnectionComponent } from './monitorize-connection/monitorize-connection.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ShareScreenComponent } from './share-screen/share-screen.component';
     LookForServerHealthComponent,
     ListScreenComponent,
     DetailsScreenComponent,
-    ShareScreenComponent
+    ShareScreenComponent,
+    MonitorizeConnectionComponent
   ],
   imports: [
     BrowserModule,
