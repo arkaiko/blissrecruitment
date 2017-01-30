@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./share-screen.component.css']
 })
 export class ShareScreenComponent {
-  showShare = false;
+  showShare = true;
   contactEmail = "";
   message="";
   urlToShare=window.location.href;
