@@ -7,15 +7,16 @@
       {{question.question}}
     </p>
       <p>Vote: </p>
-      <div *ngFor="let choice of question.choices">
-        <button>
+      <div *ngFor="let choice of question.choices; let i = index">
+        {{i}}
+        <button (click)="vote(i)">
           {{choice.choice}}
         </button>
          <span>Votes: {{choice.votes}}</span>
       </div>
   </div>
   <div>
-    <button>Go back to list</button>
+    <a routerLink="/listScreen">Go back to list</a>
     <button>Share</button>
   </div>
 </div>
