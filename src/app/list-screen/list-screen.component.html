@@ -1,19 +1,26 @@
-<div>
-  <input type="text" [(ngModel)]="searchTerms">
-  <button (click)="searchRecords()">Search</button>
-  <button (click)="dismissFilter()" [ngClass]="{dontDisplayThis: dontDisplayThis()}">Clear</button>
-  <app-share-screen></app-share-screen>
-</div>
-<div *ngFor="let question of questions">
-  <div [routerLink]="['/detailsScreen']" [queryParams]="{ question_id: question.id }" style="border: 1px solid red; display: flex; min-width: 100%; margin: 20px 0">
-    <div>
-      <img style="height: 100%" src={{question.thumb_url}}>
+<div class="container">
+  <div class="row searchArea">
+    <div class="col-xs-8">
+      <input type="text" class="form-control" [(ngModel)]="searchTerms" placeholder="Search">
     </div>
-    <div style="padding-left: 40px">
-      <p>Question number: {{question.id}}</p>
-      <p>Published date: {{question.published_at | date:'fullDate'}}</p>
-      <p>Question: {{question.question}}</p>
-      <p>+ details.</p>
+    <div class="col-xs-2">
+      <button (click)="searchRecords()" class="btn btn-primary">Search</button>
+    </div>
+    <div class="col-xs-2">
+      <button (click)="dismissFilter()" [ngClass]="{dontDisplayThis: dontDisplayThis()}" class="btn btn-danger">Clear</button>
+    </div>
+    <app-share-screen></app-share-screen>
+  </div>
+  <div class="results" *ngFor="let question of questions">
+    <div class="row"  [routerLink]="['/detailsScreen']" [queryParams]="{ question_id: question.id }">
+      <div class="col-xs-2">
+        <img class="img-responsive" src={{question.thumb_url}}>
+      </div>
+      <div class="col-xs-10" style="padding-left: 40px">
+        <p class="smallText">Question number: <span>{{question.id}}</span></p>
+        <p class="smallText">Published date: <span>{{question.published_at | date:'fullDate'}}</span></p>
+        <p class="bigText"><span>Question: </span>{{question.question}}</p>
+      </div>
     </div>
   </div>
 </div>

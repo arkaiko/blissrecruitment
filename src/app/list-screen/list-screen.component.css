@@ -1,3 +1,32 @@
+.container .searchArea {
+  margin: 40px 0;
+}
+.container .searchArea button {
+  width: 100%;
+}
+.container .results .row{
+  padding: 12px 0;
+  margin-bottom: 12px;
+  background-color: #F7F7F9;
+  border: 1px solid #E1E1E8;
+}
+.container .results .row:hover{
+  background-color: #E1E1E8;
+  border: 1px solid #F7F7F9;
+}
+.container .results .row .smallText{
+  font-size: 10px;
+  margin-bottom: 0;
+}
+.container .results .row .smallText span{
+  font-weight: 600;
+}
+.container .results .row .bigText{
+  margin: 16px 0;
+}
+.container .results .row .bigText span{
+  font-weight: 600;
+}
 .dontDisplayThis  {
   display: none;
 }

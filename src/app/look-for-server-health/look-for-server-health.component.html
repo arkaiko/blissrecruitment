@@ -1,4 +1,10 @@
-<div>
-  <p>{{loadingMessage}}</p>
-  <button [ngClass]="{dontDisplayThis: dontDisplayThis()}" (click)="checkForServer()">Try again!</button>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 messageDisplayer">
+      <p>{{loadingMessage}}</p>
+    </div>
+    <div class="col-xs-12">
+      <button class="btn btn-danger btn-lg" [ngClass]="{dontDisplayThis: dontDisplayThis()}" (click)="checkForServer()">Try again!</button>
+    </div>
+  </div>
 </div>

@@ -1,23 +1,15 @@
-div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
+div .container{
   background-color: rgba(28, 28, 28, .8);
-  top: 0;
-  left: 0;
+}
+
+div .row {
   text-align: center;
 }
-div p {
-  margin-top: 20%;
-  color: #fff;
+
+.messageDisplayer {
+  margin-top: 40px;
 }
-div button {
-  background-color: rgba(28,28,28,.6);
-  color: #fff;
-  padding: 20px 40px;
-  border: none;
-}
+
 .dontDisplayThis  {
   display: none;
 }

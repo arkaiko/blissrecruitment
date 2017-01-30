@@ -1,23 +1,25 @@
-<div>
-  <div>
-    <img src={{question.image_url}}>
-  </div>
-  <div>
-    <p>
-      {{question.question}}
-    </p>
-      <p>Vote: </p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <img class="img-responsive" src={{question.image_url}}>
+    </div>
+    <div class="col-xs-12 col-md-6 votingArea">
+      <p><span>{{question.question}}</span></p>
       <div *ngFor="let choice of question.choices; let i = index">
-        {{i}}
-        <button (click)="vote(i)">
-          {{choice.choice}}
-        </button>
-         <span>Votes: {{choice.votes}}</span>
+        <div class="col-xs-12 col-md-6 votes">
+          <button (click)="vote(i)" class="btn btn-primary btn-lg">
+            {{choice.choice}}
+            <br />
+            <span>Votes: {{choice.votes}}</span>
+          </button>
+        </div>
       </div>
-  </div>
-  <div>
-    <a routerLink="/listScreen">Go back to list</a>
-    <a routerLink="/shareScreen">Share</a>
-    <app-share-screen></app-share-screen>
+      <div class="row">
+        <div class="col-xs-12 goBack">
+          <a class="btn btn-default btn-lg" routerLink="/listScreen">Go back to list</a>
+        </div>
+        <app-share-screen></app-share-screen>
+      </div>
+    </div>
   </div>
 </div>

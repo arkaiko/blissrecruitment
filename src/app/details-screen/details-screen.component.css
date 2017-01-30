@@ -1,0 +1,25 @@
+.container {
+  margin-top: 40px;
+}
+.container .row .votingArea {
+  padding-top: 20px;
+}
+.container .row .votingArea p{
+  padding: 0 27px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.container .row .votingArea p span{
+  font-size: 20px;
+}
+button {
+  width: 100%;
+  margin: 12px;
+}
+button span {
+  font-size: 10px;
+}
+.goBack {
+  text-align: center;
+  margin-top: 44px;
+}

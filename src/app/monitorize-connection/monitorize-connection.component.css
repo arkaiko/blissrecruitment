@@ -1,12 +1,22 @@
-div {
+.container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.4);
 }
-
+.row {
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin-top: 60px;
+}
+.row div {
+  padding: 40px 0;
+}
+p {
+  color: #fff;
+}
 .hide {
   display: none
 }
