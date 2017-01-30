@@ -30,6 +30,11 @@ export class DetailsScreenComponent implements OnInit {
       .map(res => res.json())
       .subscribe(questions => this.question = questions);
   }
+
+  showShare(){
+    
+  }
+
   vote(voteIn) {
     var body = {
       'id': 1,

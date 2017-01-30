@@ -1,0 +1,7 @@
+<button (click)="showIt()">Share</button>
+<div class="mainDiv" [ngClass]="{hideBox: hideBox()}">
+  <input type="text" [(ngModel)]="contactEmail">
+  <button (click)="sharePage()">Send</button>
+  <button (click)="closeShare()">Close</button>
+  <p>{{message}}</p>
+</div>

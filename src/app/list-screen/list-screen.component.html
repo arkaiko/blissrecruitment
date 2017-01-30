@@ -2,6 +2,7 @@
   <input type="text" [(ngModel)]="searchTerms">
   <button (click)="searchRecords()">Search</button>
   <button (click)="dismissFilter()" [ngClass]="{dontDisplayThis: dontDisplayThis()}">Clear</button>
+  <app-share-screen></app-share-screen>
 </div>
 <div *ngFor="let question of questions">
   <div [routerLink]="['/detailsScreen']" [queryParams]="{ question_id: question.id }" style="border: 1px solid red; display: flex; min-width: 100%; margin: 20px 0">
