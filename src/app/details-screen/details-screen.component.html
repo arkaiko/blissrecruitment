@@ -1,3 +1,21 @@
-<p>
-  details-screen works!
-</p>
+<div>
+  <div>
+    <img src={{question.image_url}}>
+  </div>
+  <div>
+    <p>
+      {{question.question}}
+    </p>
+      <p>Vote: </p>
+      <div *ngFor="let choice of question.choices">
+        <button>
+          {{choice.choice}}
+        </button>
+         <span>Votes: {{choice.votes}}</span>
+      </div>
+  </div>
+  <div>
+    <button>Go back to list</button>
+    <button>Share</button>
+  </div>
+</div>
